@@ -47,9 +47,9 @@ def visualize_path_final(path, obstacles, grid_size):
     path = np.array(path)
     ax.scatter(path[:, 0], path[:, 1], path[:, 2], color='green', s=10)
 
-    ax.set_xlim([0, grid_size[0] * 400])  # Adjusted for real coordinates
-    ax.set_ylim([0, grid_size[1] * 400])  # Adjusted for real coordinates
-    ax.set_zlim([0, grid_size[2] * 400])  # Adjusted for real coordinates
+    ax.set_xlim([0, grid_size[0] * 100])  # Adjusted for real coordinates
+    ax.set_ylim([0, grid_size[1] * 100])  # Adjusted for real coordinates
+    ax.set_zlim([0, grid_size[2] * 100])  # Adjusted for real coordinates
 
     ax.set_xlabel('X')
     ax.set_ylabel('Y')

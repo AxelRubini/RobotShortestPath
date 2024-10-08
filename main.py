@@ -13,9 +13,10 @@ found_path = a_star(start, goal, obstacles, grid_size)
 
 if found_path:
 
-    real_path = convert_to_real_coordinates(found_path, 10)
+    real_path = convert_to_real_coordinates(found_path, 100)
     smooth_found_path = smooth_path(real_path)
     print("Path found:", found_path, "Smoothed path:", smooth_found_path, "Real path:", real_path)
+    print(len(smooth_found_path))
     visualize_path_final(smooth_found_path, obstacles, grid_size)
 else:
     print("No path found.")

@@ -28,7 +28,8 @@ def a_star(start, goal, obstacles, grid_size):
             while current is not None:
                 final_path.append(current)
                 current = path[current]
-            plt.ioff()  # Disable interactive mode
+             # Disable interactive mode
+            visualize_path(final_path,obstacles,grid_size)
             return final_path[::-1]
 
         for movement in movements:
@@ -48,6 +49,6 @@ def a_star(start, goal, obstacles, grid_size):
                     path[neighbor] = current
 
         # Visualize the current state of the path
-        #visualize_path(list(path.keys()), obstacles, grid_size, current)
+        visualize_path(list(path.keys()), obstacles, grid_size, current)
 
     return None
