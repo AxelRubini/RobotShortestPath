@@ -48,6 +48,6 @@ def a_star(start, goal, obstacles, grid_size):
                     path[neighbor] = current
 
         # Visualize the current state of the path
-        visualize_path(list(path.keys()), obstacles, grid_size, current)
+        #visualize_path(list(path.keys()), obstacles, grid_size, current)
 
     return None
