@@ -1,11 +1,17 @@
 from BlankStack import BlankStack
+from Robot import Robot
 from astar import a_star
 from visualization import visualize_path_final
 from utils import convert_to_real_coordinates, smooth_path, world_discretizer
 import Pallet
 import csv
 
-p1 = Pallet(800,1200,1000,BlankStack())
+p1 = Pallet.Pallet(800,1200,1300,BlankStack(75,110,170))
+print(p1.columns,p1.rows,len(p1.layers))
+robot = Robot()
+robot.Xcoordinate= 680
+robot.layerScan(0,p1,BlankStack(75,110,170),450)
+print(p1.layers)
 
 grid_size = world_discretizer(2530,2650,2420,50)
 start = (2, 1, 3)

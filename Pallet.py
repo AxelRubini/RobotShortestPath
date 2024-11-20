@@ -1,3 +1,5 @@
+from venv import create
+
 import BlankStack
 class Pallet :
     def __init__(self,width,depth,height,BlankStack):
@@ -9,6 +11,7 @@ class Pallet :
         self.width = width
         self.depth = depth
         self.height = height
+        self.create_pallet(self.BlankStack)
 
 
 
@@ -20,9 +23,9 @@ class Pallet :
         for i in range(self.rows):
             new_row = list()
             for j in range(self.columns):
-                new_row.add(True)
+                new_row.append(True)
 
-            layer.add(new_row)
+            layer.append(new_row)
 
         return layer
 
@@ -30,7 +33,7 @@ class Pallet :
         self.number_of_layers = self.height // BlankStack.height
 
         for i in range(self.number_of_layers):
-            self.layers.add(self.create_layer(BlankStack))
+            self.layers.append(self.create_layer(BlankStack))
 
 
 
