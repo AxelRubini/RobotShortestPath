@@ -39,3 +39,12 @@ def smooth_path(path, num_points=100):
     smooth_path = np.vstack((cs_x(t_new), cs_y(t_new), cs_z(t_new))).T
     return smooth_path
 
+def world_discretizer(x,y,z,discretizer_value):
+    number_of_x_cell = int(x//discretizer_value)
+    number_of_y_cell = int(y//discretizer_value)
+    number_of_z_cell = int(z//discretizer_value)
+    return number_of_x_cell,number_of_y_cell,number_of_z_cell
+
+
+
+
